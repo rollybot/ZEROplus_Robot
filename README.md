@@ -14,4 +14,4 @@ interfaces with the
 
 For documentation, please see the
 [user's guide](https://www.pololu.com/docs/0J19) for the library on
-rollybot.com website.
+[rollybot.com] website.
