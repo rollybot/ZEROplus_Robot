@@ -10,7 +10,7 @@ Release date: 2018-12-08<br>
 This is a library for an
 [ZEROplus Robot shield](https://www.rollybot.com/product/detail.html?product_no=18&cate_no=1&display_group=2) that
 interfaces with the
-[QTR reflectance library(pololu)](https://github.com/pololu/qtr-sensors-arduino).
+[QTR reflectance library (Pololu)](https://github.com/pololu/qtr-sensors-arduino).
 
 For documentation, please see the
 [user's guide](https://www.pololu.com/docs/0J19) for the library on
