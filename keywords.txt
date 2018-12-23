@@ -1,4 +1,3 @@
-##########
 
 ZEROplus_Robot	KEYWORD1
 
