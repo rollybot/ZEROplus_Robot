@@ -8,7 +8,7 @@ Release date: 2018-12-08<br>
 ## Summary
 
 This is a library for an
-[Arduino-compatible Robot shield](https://www.pololu.com/arduino) that
+[Arduino-compatible Robot shield](https://www.rollybot.com/product/detail.html?product_no=18&cate_no=1&display_group=2) that
 interfaces with the
 [Pololu QTR reflectance sensors](https://www.pololu.com/catalog/category/123).
 
