@@ -8,7 +8,7 @@ Release date: 2018-12-08<br>
 ## Summary
 
 This is a library for an
-[Arduino-compatible controller](https://www.pololu.com/arduino) that
+[Arduino-compatible Robot shield](https://www.pololu.com/arduino) that
 interfaces with the
 [Pololu QTR reflectance sensors](https://www.pololu.com/catalog/category/123).
 
