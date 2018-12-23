@@ -1,4 +1,4 @@
-# Arduino library for ZEROplus Robot shield of rollybot.com
+# Arduino library for ZEROplus-Robot shield
 
 Version: 1.0.0<br>
 Release date: 2018-12-08<br>
