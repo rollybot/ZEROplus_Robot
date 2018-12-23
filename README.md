@@ -17,5 +17,4 @@ For documentation, please see the
 [rollybot.com](https://www.rollybot.com/) website.
 
 ## Version history
-* 3.1.0 (2018-08-08): Added support for dimmable QTR and QTRX sensors with separate control of odd/even emitter banks.
-* 3.0.0 (2016-08-16): Updated library to work with the Arduino Library Manager.
+* 1.0.0 (2018-12-08): First version of ZEROplus Robot shield.
