@@ -1,15 +1,10 @@
-
-ZEROplus_Robot	KEYWORD1
-
-###################################
-# Syntax Coloring Map For ZEROplusMotors
-###################################
+ZEROplus_Robot  KEYWORD1
 
 ###################################
 # Datatypes (KEYWORD1)
 ###################################
 
-ZEROplusMotors	KEYWORD1
+Rollybot_Motors_L293D	KEYWORD1
 
 ###################################
 # Methods and Functions (KEYWORD2)
