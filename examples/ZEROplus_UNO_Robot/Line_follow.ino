@@ -21,9 +21,14 @@ void Line_Follow_Move() {
   if(!STATUS_Sonar_disabled) read_sonar_cm = sonar.ping_cm();
   
   Do_IF_LINE_end_of_line();
+  #if defined(R_TURN_SENSOR_ENABLED)
+     Do_IF_LINE_3ways_cross();
+  #endif
   Do_IF_LINE_crossing_line();
   Do_IF_LINE_interrupt();
 }
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 void Setup_Calibration() {
   if (!STATUS_Calibration_setup) {     // first of all, calibrate the sensor 
@@ -57,9 +62,19 @@ void QTR_Calibrate_rotate() {        // for line tracing
 void Do_IF_LINE_end_of_line() {       // when linetracing mode , end of line case
   if (sensorValues[0] > QTR_CAL_thre && sensorValues[1] > QTR_CAL_thre && sensorValues[2] > QTR_CAL_thre ) {   // end of line
     motors.forward(LTRspeed,GAP_time);   
-    motors.backward(180,30);          // for breaking with L293D   
+    motors.backward(150,30);          // for breaking with L293D   
     Do_LINE_rotate_align();           // rotating for aligning to black line , turn right
   } 
+}
+
+void Do_IF_LINE_3ways_cross() {       // when linetracing mode , 3 sensor meet black line at the same time
+  sensorValue_R = read_QRED_distance(QTR5_PIN);   // 0~3000, black is high value , over 200
+  if (sensorValue_R > 300 && sensorValues[1] < QTR_CAL_thre) {
+    motors.forward(LTRspeed,GAP_time);// move a little
+    motors.backward(150,30);          // for breaking with L293D   
+    motors.turnRight(LTRspeed,200);
+    Do_LINE_Rturn_align();            // rotating for aligning to black line , turn right
+  }
 }
 
 void Do_IF_LINE_crossing_line() {       // when linetracing mode , end of line case
@@ -77,26 +92,35 @@ void Do_LINE_rotate_align() {          // rotate align to black line  (turn left
         qtra.readCalibrated(sensorValues);
         r_counter ++;
     }while(r_counter < 250 && sensorValues[1] > QTR_CAL_thre); 
-    motors.turnRight(180,30);
+    motors.turnRight(150,10);
         
     do {                               // make sensor2 align with black line
         Batt_LED_status(LED_interval); // for batt status
         motors.turnRight(130);
         qtra.readCalibrated(sensorValues);
     }while(sensorValues[1] > QTR_CAL_thre);  
-    motors.turnLeft(180,30);           // for braking with L293D
+    motors.turnLeft(150,10);           // for braking with L293D
+}
+
+void Do_LINE_Rturn_align() {           // right rotate align to black line  
+  do {                                 // make sensor2 align with black line
+      Batt_LED_status(LED_interval);   // for batt status
+      motors.turnRight(130);
+      qtra.readCalibrated(sensorValues);
+  }while(sensorValues[1] > QTR_CAL_thre);  
+  motors.turnLeft(150,10);             // for braking with L293D
 }
 
 void Do_IF_LINE_interrupt() {     
-  if(STATUS_Sonar_disabled) return;     // ultrasonic sensor not installed
+  if(STATUS_Sonar_disabled) return;    // ultrasonic sensor not installed
   if(COUNT_for_line_interrupt > 7) {
     COUNT_for_line_interrupt = 0;
-    motors.turnRight(180,80);
-    Do_LINE_rotate_align();
+    motors.turnRight(180,200);
+    Do_LINE_Rturn_align();
   }
   if(read_sonar_cm < TRESHOLD && read_sonar_cm != 0) {  
     COUNT_for_line_interrupt++;
-    motors.backward(150,30);
+    motors.backward(150,50);
     motors.brake (100);
   }
 }

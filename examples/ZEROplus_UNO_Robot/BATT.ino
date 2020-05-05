@@ -49,4 +49,3 @@ unsigned int readAverage() {
   }
   return (voltageValue / 10);  // mV
 }
-

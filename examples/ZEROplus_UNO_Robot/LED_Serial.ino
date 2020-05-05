@@ -16,10 +16,11 @@ void DEBUG_Serial_monitor(int interval) {   // displaying debug in serial monito
   unsigned long currentTime = millis();
   if(currentTime - index_Serial_startTime > interval) {
     index_Serial_startTime = currentTime;   
-    Serial.print(" *findDistance : "); Serial.print(read_sonar_cm); Serial.print("  ");
-    Serial.print(" *line sensor  : "); 
-    Serial.print(sensorValues[0]); Serial.print("  ");
-    Serial.print(sensorValues[1]); Serial.print("  ");
-    Serial.print(sensorValues[2]); Serial.println("  ");
+    Serial.println("[ZEROplus]Debugging");
+    Serial.print("*MODE : ");   Serial.print(Switch_line_follow_mode ? "LTR" : "AUTO");  Serial.print("     "); 
+    Serial.print("*Batt : ");   Serial.print((float)read_batt_volt/1000);  Serial.print(" V"); Serial.print("     ");
+    Serial.print("*SONAR : ");  Serial.print(STATUS_Sonar_disabled ? 0 : read_sonar_cm); Serial.println(" cm");
+    Serial.print("*QTR5 : ");   Serial.println(read_QRED_distance(QTR5_PIN)); 
+    Serial.println(" ");
   }
 }

@@ -21,9 +21,10 @@ void playsong_No_sensor(int interval) {   // blink the LED every this interval
     NewTone(SOUND_BUZZER_PIN, melody[0], 10);
     delay(50);
     noNewTone(SOUND_BUZZER_PIN);
-  }
-  
-}void playsong_interval(int interval) {   // blink the LED every this interval
+  }  
+}
+
+void playsong_interval(int interval) {   // blink the LED every this interval
   unsigned long currentTime = millis();
   if(currentTime - index_Buzzer_startTime > interval) {
     index_Buzzer_startTime = currentTime;   

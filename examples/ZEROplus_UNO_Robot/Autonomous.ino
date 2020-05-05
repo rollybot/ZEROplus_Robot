@@ -14,10 +14,12 @@ void Autonomous_Move() {
     motors.brake (100);
     if (scan_average_cm(3) < temp) motors.turnRight(RUNspeed,800); // turn to the way value is hig   
   }
-  if(int check = Check_Darkness_inFloor()) { 
-    if(check == 1) { motors.backward(RUNspeed,500); motors.turnRight(RUNspeed,1000); }
-    if(check == 2) { motors.backward(RUNspeed,500); motors.turnRight(RUNspeed,1000); }
-    if(check == 3) { motors.backward(RUNspeed,500); motors.turnLeft (RUNspeed,1000); }
-    }    
+  #if defined(BLACKline_ENABLED)
+     if(int check = Check_Darkness_inFloor()) { 
+       if(check == 1) { motors.backward(RUNspeed,500); motors.turnRight(RUNspeed,1000); }
+       if(check == 2) { motors.backward(RUNspeed,500); motors.turnRight(RUNspeed,1000); }
+       if(check == 3) { motors.backward(RUNspeed,500); motors.turnLeft (RUNspeed,1000); }
+       }    
+  #endif
   motors.forward(RUNspeed);
 }
