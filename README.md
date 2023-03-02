@@ -13,7 +13,7 @@ This is a Arduino library for an
 
 [라이브러리 설치하는 법]
 1. Github에서 Code / download.zip 을 눌러 파일을 다운받는다
-![image](https://user-images.githubusercontent.com/5675424/222408999-ffb87522-312e-480b-8632-4664f1874345.png)
+![image](https://user-images.githubusercontent.com/5675424/222409152-09fc7871-507c-442d-827e-1a2e65ffeb90.png)
 
 2. Arduino IDE에서 
 ![image](https://user-images.githubusercontent.com/5675424/222390929-ef0f187a-8064-485c-b47d-52af86f803bf.png)
