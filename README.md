@@ -11,7 +11,7 @@ This is a Arduino library for an
 제로플러스 로봇용 아두이노 라이브러리로 내장된 모터,라인센서,부저,초음파센서등 각종 센서및 부품들을 제어하기 위하여, 
 다양한 서브라이브러리로 구성됨.
 
-[라이브러리 설치하는 법]
+[라이브러리 및 예제파일 설치하는 법]
 1. Github에서 Code / download.zip 을 눌러 파일을 다운받는다
 ![image](https://user-images.githubusercontent.com/5675424/222409152-09fc7871-507c-442d-827e-1a2e65ffeb90.png)
 
