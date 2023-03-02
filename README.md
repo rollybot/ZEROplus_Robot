@@ -18,7 +18,7 @@ This is a Arduino library for an
 2. Arduino IDE에서 Sketch / Include Library / Add .ZIP Library...을 눌러 아까 다운받은 zip파일을 선택한다.
 ![image](https://user-images.githubusercontent.com/5675424/222390929-ef0f187a-8064-485c-b47d-52af86f803bf.png)
 
-3. 성공적으로 설치되었다면, File / Example
+3. 성공적으로 설치되었다면, File / Examples 에서 확인가능
 ![image](https://user-images.githubusercontent.com/5675424/222411497-6f7a1e3f-9ea9-483f-acaf-dfd3333d2382.png)
 
 
