@@ -14,7 +14,7 @@ This is a Arduino library for an
 [라이브러리 설치하는 법]
 1. Github에서 Code / download.zip 을 눌러 파일을 다운받는다
 ![image](https://user-images.githubusercontent.com/5675424/222407560-54096d4d-8ee4-44b4-af77-dcff36f610af.png)
-
+2. Arduino IDE에서 
 ![image](https://user-images.githubusercontent.com/5675424/222390929-ef0f187a-8064-485c-b47d-52af86f803bf.png)
 
 
