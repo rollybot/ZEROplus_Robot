@@ -12,7 +12,7 @@ This is a Arduino library for an
 다양한 서브라이브러리로 구성됨.
 
 [라이브러리 설치하는 법]
-![image](https://user-images.githubusercontent.com/5675424/222407164-0208fe0b-f704-4573-85aa-0c3cb1b65cea.png)
+![image](https://user-images.githubusercontent.com/5675424/222407560-54096d4d-8ee4-44b4-af77-dcff36f610af.png)
 
 ![image](https://user-images.githubusercontent.com/5675424/222390929-ef0f187a-8064-485c-b47d-52af86f803bf.png)
 
