@@ -12,8 +12,8 @@ This is a Arduino library for an
 다양한 서브라이브러리로 구성됨.
 
 다운로드 zip파일
+![image](https://user-images.githubusercontent.com/5675424/222390929-ef0f187a-8064-485c-b47d-52af86f803bf.png)
 
-![image](https://user-images.githubusercontent.com/5675424/222390463-c66de917-5f3b-4f2b-977e-04de97a4b2bb.png)
 
 
 For documentation, please see the
